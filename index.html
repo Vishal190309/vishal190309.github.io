@@ -90,6 +90,15 @@
             text-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
         }
     </style>
+
+<style>
+.project-thumb-art{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(circle at 75% 20%,rgba(16,185,129,.28),transparent 28%),linear-gradient(135deg,#0b1220,#172554 55%,#07151a)}
+.project-thumb-art .gridline{position:absolute;inset:-20%;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:34px 34px;transform:perspective(500px) rotateX(55deg) translateY(45%);opacity:.5}
+.project-thumb-art .label{position:relative;text-align:center;padding:20px;z-index:2}
+.project-thumb-art .mini{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#34d399;font-weight:800}
+.project-thumb-art .title{font-size:28px;line-height:1.05;font-weight:800;color:white;margin-top:8px}
+.project-thumb-art .sub{font-size:12px;color:#94a3b8;margin-top:8px}
+</style>
 </head>
 <body class="antialiased selection:bg-brand selection:text-white">
 
@@ -113,8 +122,8 @@
                     <a href="#projects" class="text-sm font-medium text-gray-300 hover:text-brand transition-colors">Projects</a>
                     
                     <!-- Upwork Button Desktop -->
-                    <a href="https://www.upwork.com/freelancers/~0116b77073b192cefc" target="_blank" class="ml-4 flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand hover:bg-brand-light text-white text-sm font-bold shadow-lg shadow-brand/30 transition-all transform hover:-translate-y-0.5">
-                        <i class="fa-brands fa-upwork text-lg"></i> Hire Me
+                    <a href="mailto:unrealdevvishal@gmail.com" class="ml-4 flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand hover:bg-brand-light text-white text-sm font-bold shadow-lg shadow-brand/30 transition-all transform hover:-translate-y-0.5">
+                        <i class="fas fa-envelope text-lg"></i> Email Me
                     </a>
                 </div>
 
@@ -132,8 +141,9 @@
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <a href="#about" class="mobile-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-brand hover:bg-gray-800 rounded-md">About</a>
                 <a href="#skills" class="mobile-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-brand hover:bg-gray-800 rounded-md">Skills</a>
-                <a href="#experience" class="mobile-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-brand hover:bg-gray-800 rounded-md">Experience</a>
                 <a href="#projects" class="mobile-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-brand hover:bg-gray-800 rounded-md">Projects</a>
+                <a href="#reviews" class="mobile-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-brand hover:bg-gray-800 rounded-md">Reviews</a>
+                <a href="#experience" class="mobile-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-brand hover:bg-gray-800 rounded-md">Experience</a>
                 
                 <a href="https://www.upwork.com/freelancers/~0116b77073b192cefc" target="_blank" class="mt-4 flex justify-center items-center gap-2 bg-brand hover:bg-brand-light text-white px-4 py-3 rounded-md text-base font-bold shadow-lg">
                     <i class="fa-brands fa-upwork"></i> View Upwork Profile
@@ -211,215 +221,60 @@
         </div>
     </section>
 
-    <section id="about" class="py-20 bg-dark-900 border-t border-gray-800">
+    <section id="skills" class="py-20 bg-dark-900 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                
-                <div class="lg:col-span-5">
-                    <h2 class="text-sm font-bold text-brand uppercase tracking-widest mb-2">About Me</h2>
-                    <h3 class="text-3xl font-bold text-white mb-6">Dedicated Game Programmer</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed">
-                        With hands-on experience in the games industry, I build scalable systems and engaging gameplay mechanics. Whether it's implementing complex AI behaviors, setting up rock-solid multiplayer replication, or crafting fluid character controllers, I focus on writing clean, maintainable code.
-                    </p>
-                    
-                    <div class="flex flex-col space-y-4 mb-8">
-                        <div class="flex items-center gap-3 text-gray-300">
-                            <div class="w-10 h-10 rounded-lg bg-dark-800 flex items-center justify-center text-brand">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <span>India</span>
-                        </div>
-                        <div class="flex items-center gap-3 text-gray-300">
-                            <div class="w-10 h-10 rounded-lg bg-dark-800 flex items-center justify-center text-brand">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <a href="mailto:vishal@example.com" class="hover:text-white transition-colors">Contact via Email</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-7" id="skills">
-                    <h2 class="text-sm font-bold text-brand uppercase tracking-widest mb-6">Technical Arsenal</h2>
-                    
-                    <div class="space-y-8">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold text-white">Unreal Engine (Blueprints & C++)</span>
-                                <span class="text-brand">Expert</span>
-                            </div>
-                            <div class="w-full bg-dark-800 rounded-full h-2.5">
-                                <div class="bg-brand h-2.5 rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold text-white">C++ Programming</span>
-                                <span class="text-brand">Advanced</span>
-                            </div>
-                            <div class="w-full bg-dark-800 rounded-full h-2.5">
-                                <div class="bg-brand h-2.5 rounded-full" style="width: 80%"></div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold text-white">Multiplayer Networking / RPCs</span>
-                                <span class="text-brand">Advanced</span>
-                            </div>
-                            <div class="w-full bg-dark-800 rounded-full h-2.5">
-                                <div class="bg-brand h-2.5 rounded-full" style="width: 85%"></div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold text-white">Game Architecture & Design Patterns</span>
-                                <span class="text-brand">Intermediate</span>
-                            </div>
-                            <div class="w-full bg-dark-800 rounded-full h-2.5">
-                                <div class="bg-brand h-2.5 rounded-full" style="width: 75%"></div>
-                            </div>
-                            <p class="text-xs text-gray-500 mt-2">MVC, Singleton, Service Locator, Observer</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="py-20 bg-dark-800 border-t border-gray-800 relative">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-sm font-bold text-brand uppercase tracking-widest mb-2">Career Journey</h2>
-                <h3 class="text-3xl font-bold text-white">Professional Experience</h3>
+                <h2 class="text-sm font-bold text-brand uppercase tracking-widest mb-2">Technical Arsenal</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-white">Skills & Expertise</h3>
             </div>
 
-            <div class="relative border-l-2 border-brand/30 ml-3 md:ml-0 md:pl-0">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <!-- Experience Item 1 -->
-                <div class="mb-12 relative pl-8 md:pl-0">
-                    <div class="hidden md:block absolute w-4 h-4 bg-brand rounded-full -left-[9px] top-1.5 shadow-[0_0_10px_#10b981]"></div>
-                    <div class="md:hidden absolute w-4 h-4 bg-brand rounded-full -left-[25px] top-1.5 shadow-[0_0_10px_#10b981]"></div>
-                    
-                    <div class="glass-panel p-6 rounded-xl hover:border-brand/50 transition-colors md:ml-8">
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                            <div>
-                                <h4 class="text-xl font-bold text-white">Game Developer</h4>
-                                <h5 class="text-lg text-brand font-medium">Studio Berserk</h5>
-                            </div>
-                            <span class="inline-block mt-2 md:mt-0 px-3 py-1 bg-dark-700 text-gray-300 text-sm rounded-full border border-gray-600">
-                                May 2024 - Present
-                            </span>
-                        </div>
-                        <ul class="list-disc list-outside ml-4 space-y-2 text-gray-400">
-                            <li>Developing and creating robust game logic using Unreal Engine Blueprints and C++.</li>
-                            <li>Conceptualizing new game ideas and actively implementing them from prototype to production.</li>
-                            <li>Collaborating to ensure clean architecture and optimized performance.</li>
-                        </ul>
+                <!-- Core Engine -->
+                <div class="glass-panel p-8 rounded-2xl border border-gray-700 text-center hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 mx-auto bg-dark-800 rounded-full flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+                        <i class="fas fa-cube text-3xl text-brand"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">Unreal Engine</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Expert in utilizing Unreal Engine for high-performance game development, focusing on robust system architecture and seamless gameplay mechanics.</p>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">Blueprints</span>
+                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">Niagara VFX</span>
+                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">Animation Blueprints</span>
+                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">Blendspaces</span>
                     </div>
                 </div>
 
-                <!-- Experience Item 2 -->
-                <div class="relative pl-8 md:pl-0">
-                    <div class="hidden md:block absolute w-4 h-4 bg-gray-600 rounded-full -left-[9px] top-1.5 border-2 border-dark-800"></div>
-                    <div class="md:hidden absolute w-4 h-4 bg-gray-600 rounded-full -left-[25px] top-1.5 border-2 border-dark-800"></div>
-                    
-                    <div class="glass-panel p-6 rounded-xl hover:border-brand/50 transition-colors md:ml-8">
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                            <div>
-                                <div class="flex items-center gap-2">
-                                    <h4 class="text-xl font-bold text-white">Freelance Developer</h4>
-                                    <i class="fa-brands fa-upwork text-brand" title="Upwork"></i>
-                                </div>
-                                <h5 class="text-lg text-gray-300 font-medium">Independent / Upwork</h5>
-                            </div>
-                            <span class="inline-block mt-2 md:mt-0 px-3 py-1 bg-dark-700 text-gray-300 text-sm rounded-full border border-gray-600">
-                                Aug 2022 - Present
-                            </span>
-                        </div>
-                        <ul class="list-disc list-outside ml-4 space-y-2 text-gray-400">
-                            <li>Worked on an FPS game called <strong>Flood Escape</strong>, focusing heavily on programming multiplayer networking.</li>
-                            <li>Developed complex systems including dynamic flood mechanics, Zombie AI, and a Steam-integrated skin buying system.</li>
-                            <li>Created visually stunning interactive water simulations utilizing the Unreal Engine Niagara system.</li>
-                            <li>Developed utility tools specifically for Unreal Engine using Unreal CLR.</li>
-                        </ul>
+                <!-- Programming -->
+                <div class="glass-panel p-8 rounded-2xl border border-gray-700 text-center hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 mx-auto bg-dark-800 rounded-full flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+                        <i class="fas fa-code text-3xl text-brand"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">C++ Programming</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Strong foundation in C++ for building optimized, complex game logic, custom engine tools, and extending blueprint functionality natively.</p>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">OOP Principles</span>
+                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">Memory Management</span>
+                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">Design Patterns</span>
+                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">Unreal CLR</span>
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <section id="reviews" class="py-20 bg-dark-900 border-t border-gray-800 relative overflow-hidden">
-        <!-- Glow effect -->
-        <div class="absolute right-0 top-0 w-96 h-96 bg-brand/5 rounded-full blur-[100px] pointer-events-none"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <div class="inline-flex items-center justify-center gap-2 mb-2">
-                    <i class="fa-brands fa-upwork text-brand text-xl"></i>
-                    <h2 class="text-sm font-bold text-brand uppercase tracking-widest">Client Feedback</h2>
-                </div>
-                <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Freelance Success</h3>
-                <p class="text-gray-400 max-w-2xl mx-auto">Delivering high-quality C++ and Unreal Engine solutions for clients across the globe.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Review 1 -->
-                <div class="glass-panel p-8 rounded-2xl flex flex-col h-full border border-gray-700 hover:border-brand/40 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center gap-1 mb-4 text-yellow-400 text-sm">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        <span class="ml-2 text-white font-bold text-xs bg-dark-800 px-2 py-1 rounded">5.00</span>
+                <!-- Multiplayer & Systems -->
+                <div class="glass-panel p-8 rounded-2xl border border-gray-700 text-center hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 mx-auto bg-dark-800 rounded-full flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+                        <i class="fas fa-network-wired text-3xl text-brand"></i>
                     </div>
-                    <h4 class="text-lg font-bold text-white mb-3 leading-tight">Multiplayer FPS Networking (Flood Escape)</h4>
-                    <p class="text-gray-400 text-sm italic flex-1 mb-6 leading-relaxed">
-                        "Vishal expertly handled the multiplayer networking for our game. His work on the Zombie AI and Steam integration was flawless. Highly knowledgeable in Unreal C++."
-                    </p>
-                    <div class="flex items-center gap-3 pt-4 border-t border-gray-700">
-                        <div class="w-8 h-8 rounded-full bg-dark-800 flex items-center justify-center text-brand text-xs">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <span class="text-sm font-medium text-gray-300">Marcus T. <span class="text-gray-500 text-xs ml-1">(Upwork Client)</span></span>
+                    <h4 class="text-xl font-bold text-white mb-4">Multiplayer & Systems</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Specialized in crafting synchronized multiplayer experiences and scalable game architecture tailored for complex, data-heavy gameplay loops.</p>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">Networking / RPCs</span>
+                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">Lag Compensation</span>
+                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">Steam API Integration</span>
+                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">AI Behavior Trees</span>
                     </div>
                 </div>
 
-                <!-- Review 2 -->
-                <div class="glass-panel p-8 rounded-2xl flex flex-col h-full border border-gray-700 hover:border-brand/40 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center gap-1 mb-4 text-yellow-400 text-sm">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        <span class="ml-2 text-white font-bold text-xs bg-dark-800 px-2 py-1 rounded">5.00</span>
-                    </div>
-                    <h4 class="text-lg font-bold text-white mb-3 leading-tight">Unreal Engine Niagara VFX</h4>
-                    <p class="text-gray-400 text-sm italic flex-1 mb-6 leading-relaxed">
-                        "Built a beautiful and highly optimized interactive water simulation for our project. Communication was excellent and delivery was fast. Will hire again."
-                    </p>
-                    <div class="flex items-center gap-3 pt-4 border-t border-gray-700">
-                        <div class="w-8 h-8 rounded-full bg-dark-800 flex items-center justify-center text-brand text-xs">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <span class="text-sm font-medium text-gray-300">Sarah L. <span class="text-gray-500 text-xs ml-1">(Upwork Client)</span></span>
-                    </div>
-                </div>
-
-                <!-- Review 3 -->
-                <div class="glass-panel p-8 rounded-2xl flex flex-col h-full border border-gray-700 hover:border-brand/40 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center gap-1 mb-4 text-yellow-400 text-sm">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        <span class="ml-2 text-white font-bold text-xs bg-dark-800 px-2 py-1 rounded">5.00</span>
-                    </div>
-                    <h4 class="text-lg font-bold text-white mb-3 leading-tight">C++ Utility Tool Development</h4>
-                    <p class="text-gray-400 text-sm italic flex-1 mb-6 leading-relaxed">
-                        "Vishal developed exactly what we needed using Unreal CLR. He understands underlying engine architecture well and writes clean, documented code."
-                    </p>
-                    <div class="flex items-center gap-3 pt-4 border-t border-gray-700">
-                        <div class="w-8 h-8 rounded-full bg-dark-800 flex items-center justify-center text-brand text-xs">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <span class="text-sm font-medium text-gray-300">David W. <span class="text-gray-500 text-xs ml-1">(Upwork Client)</span></span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -429,22 +284,25 @@
             <div class="text-center mb-16">
                 <h2 class="text-sm font-bold text-brand uppercase tracking-widest mb-2">Featured Work</h2>
                 <h3 class="text-3xl md:text-4xl font-bold text-white">Project Showcase</h3>
-                <p class="text-gray-400 mt-3">Click the thumbnails to watch the full gameplay footage natively.</p>
+                <p class="text-gray-400 mt-3">Watch my gameplay footage and systems in action.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 
                 <!-- Project 1: Multiplayer Shooter -->
                 <div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-gray-700 shadow-xl group">
-                    <a href="https://drive.google.com/file/d/1nB_SWaUpsjCR0ZCss1CRcI8MU04EcNDs/view?usp=sharing" target="_blank" class="relative block aspect-video bg-black flex items-center justify-center border-b border-gray-700 overflow-hidden cursor-pointer group-hover:border-brand transition-colors">
-                        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#10b981 1px, transparent 1px); background-size: 20px 20px;"></div>
-                        <i class="fab fa-google-drive text-6xl text-gray-600 group-hover:scale-110 transition-transform duration-300 group-hover:text-blue-500"></i>
-                        <div class="absolute inset-0 bg-brand/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
-                            <span class="bg-black text-white px-5 py-2.5 rounded-lg font-bold flex items-center gap-2 shadow-lg border border-gray-700"><i class="fas fa-play text-brand"></i> Watch on Drive</span>
+                    <a href="https://drive.google.com/file/d/1nB_SWaUpsjCR0ZCss1CRcI8MU04EcNDs/view?usp=sharing" target="_blank" class="block relative w-full pt-[56.25%] overflow-hidden bg-gray-900 group/thumbnail cursor-pointer">
+                        <div class="absolute inset-0 project-thumb-art"><div class="gridline"></div><div class="label"><div class="mini">UNREAL ENGINE • MULTIPLAYER</div><div class="title">MULTIPLAYER<br>SHOOTER</div><div class="sub">C++ • Replication • Server Rewind</div></div></div>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover/thumbnail:bg-black/20 transition-colors duration-300">
+                            <div class="w-16 h-16 rounded-full bg-brand/90 flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover/thumbnail:scale-110 transition-transform duration-300">
+                                <i class="fas fa-play text-white text-xl ml-1"></i>
+                            </div>
                         </div>
                     </a>
                     <div class="p-8 flex-1 flex flex-col">
-                        <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-brand transition-colors">Multiplayer Shooter Game</h4>
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-bold text-white group-hover:text-brand transition-colors">Multiplayer Shooter Game</h4>
+                        </div>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="px-2 py-1 text-xs font-semibold bg-dark-700 text-brand-light rounded border border-gray-600">Unreal Engine</span>
                             <span class="px-2 py-1 text-xs font-semibold bg-dark-700 text-gray-300 rounded border border-gray-600">C++</span>
@@ -462,15 +320,18 @@
 
                 <!-- Project 2: Flood Escape -->
                 <div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-gray-700 shadow-xl group">
-                    <a href="https://drive.google.com/file/d/1xXdVbrD8b2zYIZU68PRmj6Jj9d-c-Jf4/view?usp=sharing" target="_blank" class="relative block aspect-video bg-black flex items-center justify-center border-b border-gray-700 overflow-hidden cursor-pointer group-hover:border-brand transition-colors">
-                        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#10b981 1px, transparent 1px); background-size: 20px 20px;"></div>
-                        <i class="fab fa-google-drive text-6xl text-gray-600 group-hover:scale-110 transition-transform duration-300 group-hover:text-blue-500"></i>
-                        <div class="absolute inset-0 bg-brand/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
-                            <span class="bg-black text-white px-5 py-2.5 rounded-lg font-bold flex items-center gap-2 shadow-lg border border-gray-700"><i class="fas fa-play text-brand"></i> Watch on Drive</span>
+                    <a href="https://drive.google.com/file/d/1xXdVbrD8b2zYIZU68PRmj6Jj9d-c-Jf4/view?usp=sharing" target="_blank" class="block relative w-full pt-[56.25%] overflow-hidden bg-gray-900 group/thumbnail cursor-pointer">
+                        <div class="absolute inset-0 project-thumb-art"><div class="gridline"></div><div class="label"><div class="mini">FPS • NIAGARA • AI</div><div class="title">FLOOD<br>ESCAPE</div><div class="sub">Networking • Zombie AI • Water Simulation</div></div></div>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover/thumbnail:bg-black/20 transition-colors duration-300">
+                            <div class="w-16 h-16 rounded-full bg-brand/90 flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover/thumbnail:scale-110 transition-transform duration-300">
+                                <i class="fas fa-play text-white text-xl ml-1"></i>
+                            </div>
                         </div>
                     </a>
                     <div class="p-8 flex-1 flex flex-col">
-                        <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-brand transition-colors">Flood Escape (FPS)</h4>
+                         <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-bold text-white group-hover:text-brand transition-colors">Flood Escape (FPS)</h4>
+                        </div>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="px-2 py-1 text-xs font-semibold bg-dark-700 text-brand-light rounded border border-gray-600">Multiplayer</span>
                             <span class="px-2 py-1 text-xs font-semibold bg-dark-700 text-gray-300 rounded border border-gray-600">Niagara VFX</span>
@@ -488,15 +349,18 @@
                 
                 <!-- Project 3: Train and Signal System -->
                 <div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-gray-700 shadow-xl group">
-                    <a href="https://drive.google.com/file/d/1g27o1g49iR1B-sLG_xtcU2Ywg6dhxAzs/view?usp=sharing" target="_blank" class="relative block aspect-video bg-black flex items-center justify-center border-b border-gray-700 overflow-hidden cursor-pointer group-hover:border-brand transition-colors">
-                        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#10b981 1px, transparent 1px); background-size: 20px 20px;"></div>
-                        <i class="fab fa-google-drive text-6xl text-gray-600 group-hover:scale-110 transition-transform duration-300 group-hover:text-blue-500"></i>
-                        <div class="absolute inset-0 bg-brand/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
-                            <span class="bg-black text-white px-5 py-2.5 rounded-lg font-bold flex items-center gap-2 shadow-lg border border-gray-700"><i class="fas fa-play text-brand"></i> Watch on Drive</span>
+                    <a href="https://drive.google.com/file/d/1g27o1g49iR1B-sLG_xtcU2Ywg6dhxAzs/view?usp=sharing" target="_blank" class="block relative w-full pt-[56.25%] overflow-hidden bg-gray-900 group/thumbnail cursor-pointer">
+                        <div class="absolute inset-0 project-thumb-art"><div class="gridline"></div><div class="label"><div class="mini">INDUSTRIAL SIMULATION</div><div class="title">TRAIN &amp;<br>SIGNAL SYSTEM</div><div class="sub">Siemens • Logic • Simulation</div></div></div>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover/thumbnail:bg-black/20 transition-colors duration-300">
+                            <div class="w-16 h-16 rounded-full bg-brand/90 flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover/thumbnail:scale-110 transition-transform duration-300">
+                                <i class="fas fa-play text-white text-xl ml-1"></i>
+                            </div>
                         </div>
                     </a>
                     <div class="p-8 flex-1 flex flex-col">
-                        <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-brand transition-colors">Train & Signal System (Siemens)</h4>
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-bold text-white group-hover:text-brand transition-colors">Train & Signal System (Siemens)</h4>
+                        </div>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="px-2 py-1 text-xs font-semibold bg-dark-700 text-brand-light rounded border border-gray-600">Enterprise Simulation</span>
                             <span class="px-2 py-1 text-xs font-semibold bg-dark-700 text-gray-300 rounded border border-gray-600">Logic Systems</span>
@@ -512,11 +376,13 @@
 
                 <!-- Project 4: Survival Rally -->
                 <div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-gray-700 shadow-xl group">
-                    <a href="https://www.youtube.com/watch?v=9LC2bOikNso" target="_blank" class="relative block aspect-video bg-black flex items-center justify-center border-b border-gray-700 overflow-hidden cursor-pointer group-hover:border-brand transition-colors">
-                        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#10b981 1px, transparent 1px); background-size: 20px 20px;"></div>
-                        <i class="fab fa-youtube text-6xl text-gray-600 group-hover:scale-110 transition-transform duration-300 group-hover:text-red-500"></i>
-                        <div class="absolute inset-0 bg-brand/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
-                            <span class="bg-black text-white px-5 py-2.5 rounded-lg font-bold flex items-center gap-2 shadow-lg border border-gray-700"><i class="fas fa-play text-brand"></i> Watch on YouTube</span>
+                    <a href="https://www.youtube.com/watch?v=9LC2bOikNso" target="_blank" class="block relative w-full pt-[56.25%] overflow-hidden bg-gray-900 group/thumbnail cursor-pointer">
+                        <!-- Using YouTube's default high-res thumbnail based on the video ID -->
+                        <img src="https://i.ytimg.com/vi/9LC2bOikNso/hqdefault.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/10b981?text=Survival+Rally+Gameplay'" alt="Survival Rally Thumbnail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover/thumbnail:scale-105 opacity-80 group-hover/thumbnail:opacity-100">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover/thumbnail:bg-black/20 transition-colors duration-300">
+                            <div class="w-16 h-16 rounded-full bg-brand/90 flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover/thumbnail:scale-110 transition-transform duration-300">
+                                <i class="fas fa-play text-white text-xl ml-1"></i>
+                            </div>
                         </div>
                     </a>
                     <div class="p-8 flex-1 flex flex-col">
@@ -536,11 +402,12 @@
                 
                 <!-- Project 5: Tactician -->
                 <div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-gray-700 shadow-xl group lg:col-span-2 lg:w-1/2 lg:mx-auto">
-                    <a href="https://www.youtube.com/watch?v=9LC2bOikNso" target="_blank" class="relative block aspect-video bg-black flex items-center justify-center border-b border-gray-700 overflow-hidden cursor-pointer group-hover:border-brand transition-colors">
-                        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#10b981 1px, transparent 1px); background-size: 20px 20px;"></div>
-                        <i class="fab fa-youtube text-6xl text-gray-600 group-hover:scale-110 transition-transform duration-300 group-hover:text-red-500"></i>
-                        <div class="absolute inset-0 bg-brand/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
-                            <span class="bg-black text-white px-5 py-2.5 rounded-lg font-bold flex items-center gap-2 shadow-lg border border-gray-700"><i class="fas fa-play text-brand"></i> Watch on YouTube</span>
+                    <a href="https://www.youtube.com/watch?v=V5CznJZZRRw" target="_blank" class="block relative w-full pt-[56.25%] overflow-hidden bg-gray-900 group/thumbnail cursor-pointer">
+                        <img src="https://i.ytimg.com/vi/V5CznJZZRRw/hqdefault.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/10b981?text=Tactician+Gameplay'" alt="Tactician Thumbnail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover/thumbnail:scale-105 opacity-80 group-hover/thumbnail:opacity-100">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover/thumbnail:bg-black/20 transition-colors duration-300">
+                            <div class="w-16 h-16 rounded-full bg-brand/90 flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover/thumbnail:scale-110 transition-transform duration-300">
+                                <i class="fas fa-play text-white text-xl ml-1"></i>
+                            </div>
                         </div>
                     </a>
                     <div class="p-8 flex-1 flex flex-col">
@@ -557,6 +424,154 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-brand uppercase tracking-widest mb-2">Client Testimonials</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-white flex items-center justify-center gap-3">
+                    What Clients Say on <i class="fa-brands fa-upwork text-[#14a800]"></i>
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="glass-panel p-8 rounded-2xl border border-gray-700 relative">
+                    <div class="absolute -top-4 -right-4 text-6xl text-gray-800 opacity-50"><i class="fas fa-quote-right"></i></div>
+                    
+                    <div class="flex items-center gap-1 mb-4 text-[#14a800]">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span class="text-white font-bold ml-2">5.0</span>
+                    </div>
+                    
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">"Vishal is exceptionally talented and results-focused. He asks intelligent questions to make sure the tasks are clear. This project was pretty much all blue-printing and some of it was quite sophisticated. A+ work. I will absolutely hire him again if I need more Unreal Engine talent."</p>
+                    
+                    <div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-700">
+                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Committed to Quality</span>
+                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Clear Communicator</span>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="glass-panel p-8 rounded-2xl border border-gray-700 relative">
+                    <div class="absolute -top-4 -right-4 text-6xl text-gray-800 opacity-50"><i class="fas fa-quote-right"></i></div>
+                    
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="flex items-center gap-1 text-[#14a800]">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-white font-bold ml-2">5.0</span>
+                        </div>
+                        <span class="text-sm text-gray-500">Mar 24, 2025</span>
+                    </div>
+                    
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">"Vishal is easily one of the best contractors I've ever worked with on Upwork. He is highly skilled, communicates very well and takes it upon himself to make sure he understands the work requested to make it the best it can be. He demonstrates an exceptional combination of technological knowledge and work ethic."</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="glass-panel p-8 rounded-2xl border border-gray-700 relative">
+                    <div class="absolute -top-4 -right-4 text-6xl text-gray-800 opacity-50"><i class="fas fa-quote-right"></i></div>
+                    
+                    <div class="flex items-center gap-1 mb-4 text-[#14a800]">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span class="text-white font-bold ml-2">5.0</span>
+                    </div>
+                    
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">"Vishal should be your next hire! He has exceptional skills, is detail-oriented and asks intelligent questions to make sure he provides what is requested. He is also quite FAST. I will not hesitate to hire him again."</p>
+                    
+                    <div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-700">
+                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Reliable</span>
+                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Solution Oriented</span>
+                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Clear Communicator</span>
+                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">Detail Oriented</span>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="glass-panel p-8 rounded-2xl border border-gray-700 relative">
+                    <div class="absolute -top-4 -right-4 text-6xl text-gray-800 opacity-50"><i class="fas fa-quote-right"></i></div>
+                    
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="flex items-center gap-1 text-[#14a800]">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-white font-bold ml-2">5.0</span>
+                        </div>
+                        <span class="text-sm text-gray-500">Feb 21, 2026</span>
+                    </div>
+                    
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">"Vishal is an awesome developer that helped me with many systems. He knows C++ and UE Blueprints just perfect. The quality of work is perfect as well. The communication with Vishal is always easy and pleasant. I definitely recommend anyone to work with Vishal."</p>
+                </div>
+
+            </div>
+            
+            <div class="mt-12 text-center">
+                 <a href="https://www.upwork.com/freelancers/~0116b77073b192cefc" target="_blank" class="inline-flex items-center gap-2 bg-[#14a800] hover:bg-[#14a800]/90 text-white px-6 py-3 rounded-md text-base font-bold shadow-lg transition-colors">
+                    View Full Upwork Profile <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 bg-dark-800 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-brand uppercase tracking-widest mb-2">Career Path</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-white">Professional Experience</h3>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="relative border-l border-gray-700 ml-3 md:ml-0 md:border-none space-y-12">
+                    
+                    <!-- Freelancer Experience -->
+                    <div class="relative pl-8 md:pl-0">
+                        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-700 top-10 z-0"></div>
+                        <div class="md:grid md:grid-cols-2 md:gap-8 items-start relative z-10">
+                            
+                            <div class="md:text-right md:pr-8 mb-4 md:mb-0">
+                                <h4 class="text-2xl font-bold text-white">Freelance Game Developer</h4>
+                                <div class="text-brand font-medium mt-1">Upwork</div>
+                                <div class="text-sm text-gray-500 mt-2">Aug 2022 - Present</div>
+                            </div>
+                            
+                            <div class="absolute -left-10 md:left-1/2 transform md:-translate-x-1/2 top-1 md:top-0 w-5 h-5 rounded-full bg-dark-900 border-4 border-brand z-10 shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div>
+                            
+                            <div class="glass-panel p-6 rounded-xl border border-gray-700 md:pl-8">
+                                <ul class="text-gray-400 text-sm space-y-2 list-none">
+                                    <li class="flex items-start gap-2"><i class="fas fa-angle-right text-brand mt-1"></i><span>Worked on FPS game called Flood Escape, programming multiplayer networking, flood system, zombie AI, and skin buy system (Steam).</span></li>
+                                    <li class="flex items-start gap-2"><i class="fas fa-angle-right text-brand mt-1"></i><span>Created interactive water simulation using Unreal Engine Niagara system.</span></li>
+                                    <li class="flex items-start gap-2"><i class="fas fa-angle-right text-brand mt-1"></i><span>Developed Unreal Engine utility tools using Unreal CLR.</span></li>
+                                    <li class="flex items-start gap-2"><i class="fas fa-angle-right text-brand mt-1"></i><span>Consistently delivered high-quality C++ and Blueprint solutions for diverse client projects.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Studio Berserk Experience -->
+                    <div class="relative pl-8 md:pl-0">
+                        <div class="md:grid md:grid-cols-2 md:gap-8 items-start relative z-10">
+                            
+                            <div class="md:text-right md:pr-8 mb-4 md:mb-0">
+                                <h4 class="text-2xl font-bold text-white">Game Developer</h4>
+                                <div class="text-brand font-medium mt-1">Studio Berserk</div>
+                                <div class="text-sm text-gray-500 mt-2">Dec 2022 - Present</div>
+                            </div>
+                            
+                            <div class="absolute -left-10 md:left-1/2 transform md:-translate-x-1/2 top-1 md:top-0 w-5 h-5 rounded-full bg-dark-900 border-4 border-gray-600 z-10"></div>
+                            
+                            <div class="glass-panel p-6 rounded-xl border border-gray-700 md:pl-8">
+                                <ul class="text-gray-400 text-sm space-y-2 list-none">
+                                    <li class="flex items-start gap-2"><i class="fas fa-angle-right text-brand mt-1"></i><span>Developing and creating complex game logic using Blueprints and C++.</span></li>
+                                    <li class="flex items-start gap-2"><i class="fas fa-angle-right text-brand mt-1"></i><span>Conceptualizing new game ideas and overseeing their implementation from prototype to production.</span></li>
+                                    <li class="flex items-start gap-2"><i class="fas fa-angle-right text-brand mt-1"></i><span>Collaborating with art and design teams to ensure technical feasibility of creative visions.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </section>
@@ -604,7 +619,7 @@
             });
         });
 
-        // Navbar scroll effect (add background blur when scrolling down)
+        // Navbar scroll effect
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {
@@ -615,6 +630,7 @@
                 navbar.classList.add('glass-panel');
             }
         });
+        
     </script>
 </body>
 </html>
