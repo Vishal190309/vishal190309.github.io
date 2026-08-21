@@ -99,7 +99,12 @@
 .project-thumb-art .title{font-size:28px;line-height:1.05;font-weight:800;color:white;margin-top:8px}
 .project-thumb-art .sub{font-size:12px;color:#94a3b8;margin-top:8px}
 </style>
-</head>
+<style>
+.embedded-video{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-shell{position:absolute;inset:0;background:#020617}
+.fullscreen-btn{position:absolute;right:14px;bottom:14px;z-index:5;border:1px solid rgba(255,255,255,.18);background:rgba(2,6,23,.82);color:#fff;padding:9px 12px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer}
+.fullscreen-btn:hover{background:rgba(16,185,129,.9)}
+</style></head>
 <body class="antialiased selection:bg-brand selection:text-white">
 
     <nav class="fixed w-full z-50 glass-panel border-b border-gray-800 transition-all duration-300" id="navbar">
@@ -291,14 +296,11 @@
                 
                 <!-- Project 1: Multiplayer Shooter -->
                 <div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-gray-700 shadow-xl group">
-                    <a href="https://drive.google.com/file/d/1nB_SWaUpsjCR0ZCss1CRcI8MU04EcNDs/view?usp=sharing" target="_blank" class="block relative w-full pt-[56.25%] overflow-hidden bg-gray-900 group/thumbnail cursor-pointer">
-                        <div class="absolute inset-0 project-thumb-art"><div class="gridline"></div><div class="label"><div class="mini">UNREAL ENGINE • MULTIPLAYER</div><div class="title">MULTIPLAYER<br>SHOOTER</div><div class="sub">C++ • Replication • Server Rewind</div></div></div>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover/thumbnail:bg-black/20 transition-colors duration-300">
-                            <div class="w-16 h-16 rounded-full bg-brand/90 flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover/thumbnail:scale-110 transition-transform duration-300">
-                                <i class="fas fa-play text-white text-xl ml-1"></i>
-                            </div>
-                        </div>
-                    </a>
+                    <div class="block relative w-full pt-[56.25%] overflow-hidden bg-gray-900">
+<div class="video-shell">
+<iframe class="embedded-video" src="https://drive.google.com/file/d/1nB_SWaUpsjCR0ZCss1CRcI8MU04EcNDs/preview" title="Multiplayer Shooter Game" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<button class="fullscreen-btn" type="button" onclick="openVideoFullscreen(this)"><i class="fas fa-expand"></i> Fullscreen</button>
+</div></div>
                     <div class="p-8 flex-1 flex flex-col">
                         <div class="flex justify-between items-start mb-4">
                             <h4 class="text-2xl font-bold text-white group-hover:text-brand transition-colors">Multiplayer Shooter Game</h4>
@@ -320,14 +322,11 @@
 
                 <!-- Project 2: Flood Escape -->
                 <div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-gray-700 shadow-xl group">
-                    <a href="https://drive.google.com/file/d/1xXdVbrD8b2zYIZU68PRmj6Jj9d-c-Jf4/view?usp=sharing" target="_blank" class="block relative w-full pt-[56.25%] overflow-hidden bg-gray-900 group/thumbnail cursor-pointer">
-                        <div class="absolute inset-0 project-thumb-art"><div class="gridline"></div><div class="label"><div class="mini">FPS • NIAGARA • AI</div><div class="title">FLOOD<br>ESCAPE</div><div class="sub">Networking • Zombie AI • Water Simulation</div></div></div>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover/thumbnail:bg-black/20 transition-colors duration-300">
-                            <div class="w-16 h-16 rounded-full bg-brand/90 flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover/thumbnail:scale-110 transition-transform duration-300">
-                                <i class="fas fa-play text-white text-xl ml-1"></i>
-                            </div>
-                        </div>
-                    </a>
+                    <div class="block relative w-full pt-[56.25%] overflow-hidden bg-gray-900">
+<div class="video-shell">
+<iframe class="embedded-video" src="https://drive.google.com/file/d/1xXdVbrD8b2zYIZU68PRmj6Jj9d-c-Jf4/preview" title="Flood Escape (FPS)" loading="lazy" allow="autoplay; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<button class="fullscreen-btn" type="button" onclick="openVideoFullscreen(this)"><i class="fas fa-expand"></i> Fullscreen</button>
+</div></div>
                     <div class="p-8 flex-1 flex flex-col">
                          <div class="flex justify-between items-start mb-4">
                             <h4 class="text-2xl font-bold text-white group-hover:text-brand transition-colors">Flood Escape (FPS)</h4>
@@ -349,14 +348,11 @@
                 
                 <!-- Project 3: Train and Signal System -->
                 <div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-gray-700 shadow-xl group">
-                    <a href="https://drive.google.com/file/d/1g27o1g49iR1B-sLG_xtcU2Ywg6dhxAzs/view?usp=sharing" target="_blank" class="block relative w-full pt-[56.25%] overflow-hidden bg-gray-900 group/thumbnail cursor-pointer">
-                        <div class="absolute inset-0 project-thumb-art"><div class="gridline"></div><div class="label"><div class="mini">INDUSTRIAL SIMULATION</div><div class="title">TRAIN &amp;<br>SIGNAL SYSTEM</div><div class="sub">Siemens • Logic • Simulation</div></div></div>
-                        <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover/thumbnail:bg-black/20 transition-colors duration-300">
-                            <div class="w-16 h-16 rounded-full bg-brand/90 flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover/thumbnail:scale-110 transition-transform duration-300">
-                                <i class="fas fa-play text-white text-xl ml-1"></i>
-                            </div>
-                        </div>
-                    </a>
+                    <div class="block relative w-full pt-[56.25%] overflow-hidden bg-gray-900">
+<div class="video-shell">
+<iframe class="embedded-video" src="https://drive.google.com/file/d/1g27o1g49iR1B-sLG_xtcU2Ywg6dhxAzs/preview" title="Train & Signal System (Siemens)" loading="lazy" allow="autoplay; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<button class="fullscreen-btn" type="button" onclick="openVideoFullscreen(this)"><i class="fas fa-expand"></i> Fullscreen</button>
+</div></div>
                     <div class="p-8 flex-1 flex flex-col">
                         <div class="flex justify-between items-start mb-4">
                             <h4 class="text-2xl font-bold text-white group-hover:text-brand transition-colors">Train & Signal System (Siemens)</h4>
@@ -376,15 +372,18 @@
 
                 <!-- Project 4: Survival Rally -->
                 <div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-gray-700 shadow-xl group">
-                    <a href="https://www.youtube.com/watch?v=9LC2bOikNso" target="_blank" class="block relative w-full pt-[56.25%] overflow-hidden bg-gray-900 group/thumbnail cursor-pointer">
-                        <!-- Using YouTube's default high-res thumbnail based on the video ID -->
-                        <img src="https://i.ytimg.com/vi/9LC2bOikNso/hqdefault.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/10b981?text=Survival+Rally+Gameplay'" alt="Survival Rally Thumbnail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover/thumbnail:scale-105 opacity-80 group-hover/thumbnail:opacity-100">
-                        <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover/thumbnail:bg-black/20 transition-colors duration-300">
-                            <div class="w-16 h-16 rounded-full bg-brand/90 flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover/thumbnail:scale-110 transition-transform duration-300">
-                                <i class="fas fa-play text-white text-xl ml-1"></i>
-                            </div>
-                        </div>
-                    </a>
+                    <div class="block relative w-full pt-[56.25%] overflow-hidden bg-gray-900">
+<div class="video-shell">
+<iframe
+    class="embedded-video"
+    src="https://www.youtube.com/embed/9LC2bOikNso?rel=0&playsinline=1"
+    title="Survival Rally (Mobile Game)"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+</iframe>
+<button class="fullscreen-btn" type="button" onclick="openVideoFullscreen(this)"><i class="fas fa-expand"></i> Fullscreen</button>
+</div></div>
                     <div class="p-8 flex-1 flex flex-col">
                         <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-brand transition-colors">Survival Rally (Mobile Game)</h4>
                         <div class="flex flex-wrap gap-2 mb-6">
@@ -402,14 +401,11 @@
                 
                 <!-- Project 5: Tactician -->
                 <div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-gray-700 shadow-xl group lg:col-span-2 lg:w-1/2 lg:mx-auto">
-                    <a href="https://www.youtube.com/watch?v=V5CznJZZRRw" target="_blank" class="block relative w-full pt-[56.25%] overflow-hidden bg-gray-900 group/thumbnail cursor-pointer">
-                        <img src="https://i.ytimg.com/vi/V5CznJZZRRw/hqdefault.jpg" onerror="this.src='https://placehold.co/800x450/1e293b/10b981?text=Tactician+Gameplay'" alt="Tactician Thumbnail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover/thumbnail:scale-105 opacity-80 group-hover/thumbnail:opacity-100">
-                        <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover/thumbnail:bg-black/20 transition-colors duration-300">
-                            <div class="w-16 h-16 rounded-full bg-brand/90 flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover/thumbnail:scale-110 transition-transform duration-300">
-                                <i class="fas fa-play text-white text-xl ml-1"></i>
-                            </div>
-                        </div>
-                    </a>
+                    <div class="block relative w-full pt-[56.25%] overflow-hidden bg-gray-900">
+<div class="video-shell">
+<iframe class="embedded-video" src="https://www.youtube.com/embed/V5CznJZZRRw?rel=0&playsinline=1" title="Tactician" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<button class="fullscreen-btn" type="button" onclick="openVideoFullscreen(this)"><i class="fas fa-expand"></i> Fullscreen</button>
+</div></div>
                     <div class="p-8 flex-1 flex flex-col">
                         <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-brand transition-colors">Tactician</h4>
                         <div class="flex flex-wrap gap-2 mb-6">
@@ -602,6 +598,16 @@
     </footer>
 
     <script>
+function openVideoFullscreen(button){
+  const shell=button.closest('.video-shell');
+  const iframe=shell && shell.querySelector('iframe');
+  const target=iframe || shell;
+  if(target.requestFullscreen) target.requestFullscreen();
+  else if(target.webkitRequestFullscreen) target.webkitRequestFullscreen();
+}
+</script>
+
+<script>
         
         // Mobile menu toggle
         const btn = document.getElementById('mobile-menu-btn');
