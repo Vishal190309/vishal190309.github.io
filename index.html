@@ -1,129 +1,620 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Vishal Deshmukh — Unreal Engine Developer</title>
-  <meta name="description" content="Vishal Deshmukh — Unreal Engine gameplay programmer specializing in C++, Blueprints, multiplayer networking, AI, gameplay systems and rapid prototyping.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#07090d;--panel:#0e1219;--panel2:#121822;--text:#f5f7fb;--muted:#9ba5b5;--line:#202734;--accent:#70f0c0;--accent2:#76a8ff;--max:1180px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% 5%,#17243a 0,transparent 28%),var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.6}
-    a{color:inherit;text-decoration:none}.wrap{max-width:var(--max);margin:auto;padding:0 24px}
-    nav{position:sticky;top:0;z-index:10;background:rgba(7,9,13,.78);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
-    .navin{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:"Space Grotesk";font-weight:700;letter-spacing:-.03em}.brand span{color:var(--accent)}
-    .links{display:flex;gap:28px;color:var(--muted);font-size:14px}.links a:hover{color:var(--text)}
-    .hero{min-height:78vh;display:grid;align-items:center;padding:90px 0 70px}.eyebrow{color:var(--accent);font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
-    h1,h2,h3{font-family:"Space Grotesk";margin:0;line-height:1.05;letter-spacing:-.04em}h1{font-size:clamp(48px,7vw,86px);max-width:850px;margin-top:18px}
-    .hero p{max-width:680px;color:var(--muted);font-size:19px;margin:26px 0}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:13px 18px;border:1px solid var(--line);border-radius:10px;font-weight:700;font-size:14px}.btn.primary{background:var(--text);color:#080a0e;border-color:var(--text)}.btn:hover{transform:translateY(-1px)}
-    .stats{display:flex;gap:36px;margin-top:55px;flex-wrap:wrap}.stat strong{display:block;font:700 30px "Space Grotesk"}.stat span{color:var(--muted);font-size:13px}
-    section{padding:95px 0}.sectionhead{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}.sectionhead h2{font-size:42px}.sectionhead p{color:var(--muted);max-width:520px;margin:0}
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:linear-gradient(145deg,var(--panel),#0a0d12);border:1px solid var(--line);border-radius:16px;padding:25px;position:relative;overflow:hidden}.card:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(112,240,192,.06),transparent 45%);pointer-events:none}
-    .tag{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;font-weight:700}.card h3{font-size:26px;margin:10px 0}.card p{color:var(--muted);margin:0 0 18px}.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{border:1px solid var(--line);border-radius:999px;padding:5px 9px;font-size:12px;color:#c8cfda}
-    .wide{grid-column:1/-1}.video{aspect-ratio:16/9;background:#050608;border-radius:12px;overflow:hidden;margin-bottom:18px;border:1px solid var(--line)}iframe{width:100%;height:100%;border:0}
-    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.service{padding:22px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}.service h3{font-size:19px;margin:10px 0}.service p{color:var(--muted);font-size:14px;margin:0}
-    .about{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}.aboutbox{border:1px solid var(--line);border-radius:16px;padding:30px;background:var(--panel)}.aboutbox p{color:var(--muted)}
-    .timeline{display:grid;gap:14px}.role{display:flex;justify-content:space-between;gap:20px;padding-bottom:18px;border-bottom:1px solid var(--line)}.role:last-child{border:0}.role b{font-family:"Space Grotesk"}.role span{color:var(--muted);font-size:13px}
-    .contact{border:1px solid var(--line);border-radius:20px;padding:45px;background:radial-gradient(circle at 85% 10%,rgba(118,168,255,.18),transparent 35%),var(--panel)}.contact h2{font-size:48px;max-width:650px}.contact p{color:var(--muted);max-width:650px}
-    footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px}
-    @media(max-width:800px){.links{display:none}.grid,.about{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.hero{min-height:auto;padding-top:70px}.sectionhead{display:block}.sectionhead p{margin-top:14px}.wide{grid-column:auto}}
-    @media(max-width:520px){.services{grid-template-columns:1fr}.wrap{padding:0 17px}.hero p{font-size:17px}.stats{gap:22px}.contact h2{font-size:38px}.foot{display:block}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Deshmukh | Unreal Engine Game Developer</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Configure Tailwind Theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        },
+                        brand: {
+                            DEFAULT: '#10b981', // Emerald green 
+                            light: '#34d399',
+                            dark: '#059669',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Glassmorphism effects */
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #10b981; 
+        }
+
+        /* Video Container Aspect Ratio */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Neon text effect for headers */
+        .text-glow {
+            text-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+        }
+    </style>
 </head>
-<body>
-<nav><div class="wrap navin">
-  <a class="brand" href="#">Vishal<span>.</span></a>
-  <div class="links"><a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div>
-  <a class="btn" href="https://www.upwork.com/freelancers/~0116b77073b192cefc" target="_blank">Hire on Upwork ↗</a>
-</div></nav>
+<body class="antialiased selection:bg-brand selection:text-white">
 
-<main>
-<section class="hero"><div class="wrap">
-  <div class="eyebrow">Unreal Engine • Gameplay • Multiplayer</div>
-  <h1>I build game systems that feel good to play.</h1>
-  <p>Unreal Engine gameplay programmer focused on C++, Blueprints, multiplayer networking, AI, combat systems, tools and rapid prototyping.</p>
-  <div class="actions"><a class="btn primary" href="#work">View selected work ↓</a><a class="btn" href="https://www.upwork.com/freelancers/~0116b77073b192cefc" target="_blank">Start a project ↗</a></div>
-  <div class="stats"><div class="stat"><strong>100%</strong><span>Job Success on Upwork</span></div><div class="stat"><strong>26</strong><span>Total Upwork jobs</span></div><div class="stat"><strong>282</strong><span>Hours tracked</span></div><div class="stat"><strong>5.0</strong><span>Recent client ratings</span></div></div>
-</div></section>
+    <nav class="fixed w-full z-50 glass-panel border-b border-gray-800 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fas fa-gamepad text-brand text-2xl"></i>
+                    <a href="#" class="text-xl font-bold tracking-tight text-white">
+                        Vishal<span class="text-brand">.Dev</span>
+                    </a>
+                </div>
 
-<section id="work"><div class="wrap">
-  <div class="sectionhead"><h2>Selected work</h2><p>A portfolio built around the systems I can bring into your Unreal project—not just screenshots, but the engineering behind them.</p></div>
-  <div class="grid">
-    <article class="card wide">
-      <div class="video"><iframe src="https://www.youtube.com/embed/V5CznJZZRRw" title="Unreal Engine project demo" allowfullscreen></iframe></div>
-      <span class="tag">Multiplayer shooter</span><h3>Networked FPS gameplay</h3>
-      <p>Sessions, replicated player state, RPC-driven gameplay, lag compensation, server-side rewind, client prediction, recoil, game modes and team mechanics.</p>
-      <div class="chips"><span class="chip">C++</span><span class="chip">Blueprints</span><span class="chip">Replication</span><span class="chip">RPC</span><span class="chip">Server Rewind</span></div>
-    </article>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-sm font-medium text-gray-300 hover:text-brand transition-colors">About</a>
+                    <a href="#skills" class="text-sm font-medium text-gray-300 hover:text-brand transition-colors">Skills</a>
+                    <a href="#experience" class="text-sm font-medium text-gray-300 hover:text-brand transition-colors">Experience</a>
+                    <a href="#projects" class="text-sm font-medium text-gray-300 hover:text-brand transition-colors">Projects</a>
+                    
+                    <!-- Upwork Button Desktop -->
+                    <a href="https://www.upwork.com/freelancers/~0116b77073b192cefc" target="_blank" class="ml-4 flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand hover:bg-brand-light text-white text-sm font-bold shadow-lg shadow-brand/30 transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-upwork text-lg"></i> Hire Me
+                    </a>
+                </div>
 
-    <article class="card">
-      <div class="video"><iframe src="https://www.youtube.com/embed/9LC2bOikNso" title="Unreal Engine project demo" allowfullscreen></iframe></div>
-      <span class="tag">Simulation / Niagara</span><h3>Interactive water system</h3>
-      <p>Interactive water simulation built with Unreal Engine's Niagara tooling, designed as a gameplay-facing visual system.</p>
-      <div class="chips"><span class="chip">Niagara</span><span class="chip">Simulation</span><span class="chip">Gameplay</span></div>
-    </article>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
 
-    <article class="card">
-      <span class="tag">Systems engineering</span><h3>Gameplay & AI systems</h3>
-      <p>Gameplay logic, AI behaviors, combat mechanics and reusable systems built with C++ and Blueprints for FPS / third-person projects.</p>
-      <div class="chips"><span class="chip">AI</span><span class="chip">StateTree</span><span class="chip">Gameplay</span><span class="chip">C++</span></div>
-    </article>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-gray-800 absolute w-full left-0">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#about" class="mobile-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-brand hover:bg-gray-800 rounded-md">About</a>
+                <a href="#skills" class="mobile-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-brand hover:bg-gray-800 rounded-md">Skills</a>
+                <a href="#experience" class="mobile-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-brand hover:bg-gray-800 rounded-md">Experience</a>
+                <a href="#projects" class="mobile-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-brand hover:bg-gray-800 rounded-md">Projects</a>
+                
+                <a href="https://www.upwork.com/freelancers/~0116b77073b192cefc" target="_blank" class="mt-4 flex justify-center items-center gap-2 bg-brand hover:bg-brand-light text-white px-4 py-3 rounded-md text-base font-bold shadow-lg">
+                    <i class="fa-brands fa-upwork"></i> View Upwork Profile
+                </a>
+            </div>
+        </div>
+    </nav>
 
-    <article class="card">
-      <span class="tag">Tools</span><h3>Unreal utility tools</h3>
-      <p>Editor and development utilities that reduce repetitive work and speed up production workflows inside Unreal Engine.</p>
-      <div class="chips"><span class="chip">UnrealCLR</span><span class="chip">Editor Tools</span><span class="chip">Automation</span></div>
-    </article>
+    <section id="hero" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-[90vh]">
+        <!-- Background Grid Effect -->
+        <div class="absolute inset-0 z-0 opacity-10" style="background-image: radial-gradient(#10b981 1px, transparent 1px); background-size: 40px 40px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div class="text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-sm font-semibold mb-6">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-brand"></span>
+                        </span>
+                        Available for Freelance Projects
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 text-glow">
+                        Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-cyan-400">Vishal</span>
+                    </h1>
+                    
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-300 mb-6">
+                        Unreal Engine & C++ Developer
+                    </h2>
+                    
+                    <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Specializing in complex game logic, robust multiplayer networking, and bringing ambitious game design concepts to life through elegant C++ and Blueprint visual scripting.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#projects" class="px-8 py-3.5 rounded-lg bg-brand hover:bg-brand-light text-white font-bold text-center transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]">
+                            View My Work
+                        </a>
+                        <a href="https://github.com" target="_blank" class="px-8 py-3.5 rounded-lg glass-panel hover:bg-gray-800 text-white font-semibold text-center flex items-center justify-center gap-2 transition-colors">
+                            <i class="fab fa-github text-xl"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Visual elements -->
+                <div class="hidden lg:block relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand/20 to-transparent rounded-full blur-3xl"></div>
+                    <div class="relative glass-panel p-6 rounded-2xl border border-gray-700 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                        <div class="flex items-center gap-2 mb-4 border-b border-gray-700 pb-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            <span class="text-xs text-gray-400 ml-2 font-mono">Source/PlayerCharacter.cpp</span>
+                        </div>
+                        <pre class="text-sm font-mono text-gray-300 overflow-x-auto">
+<span class="text-purple-400">void</span> APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+{
+    Super::SetupPlayerInputComponent(PlayerInputComponent);
+    
+    <span class="text-gray-500">// Bind jump events</span>
+    PlayerInputComponent->BindAction(<span class="text-green-400">"Jump"</span>, IE_Pressed, <span class="text-brand">this</span>, &ACharacter::Jump);
+    PlayerInputComponent->BindAction(<span class="text-green-400">"Jump"</span>, IE_Released, <span class="text-brand">this</span>, &ACharacter::StopJumping);
+    
+    <span class="text-gray-500">// Bind movement events</span>
+    PlayerInputComponent->BindAxis(<span class="text-green-400">"MoveForward"</span>, <span class="text-brand">this</span>, &APlayerCharacter::MoveForward);
+    PlayerInputComponent->BindAxis(<span class="text-green-400">"MoveRight"</span>, <span class="text-brand">this</span>, &APlayerCharacter::MoveRight);
+}
+                        </pre>
+                    </div>
+                </div>
 
-    <article class="card">
-      <span class="tag">Character systems</span><h3>Skill & movement system</h3>
-      <p>Side-scrolling movement, ability systems and character ability-selection UI designed for modular gameplay.</p>
-      <div class="chips"><span class="chip">Abilities</span><span class="chip">Movement</span><span class="chip">UI</span></div>
-    </article>
+            </div>
+        </div>
+    </section>
 
-    <article class="card wide">
-      <span class="tag">Additional material</span><h3>Project files & demos</h3>
-      <p>More project material supplied for this portfolio. Open the items below to view the original files.</p>
-      <div class="actions">
-        <a class="btn" href="https://drive.google.com/file/d/1g27o1g49iR1B-sLG_xtcU2Ywg6dhxAzs/view?usp=sharing" target="_blank">Demo / File 01 ↗</a>
-        <a class="btn" href="https://drive.google.com/file/d/1nB_SWaUpsjCR0ZCss1CRcI8MU04EcNDs/view?usp=sharing" target="_blank">Demo / File 02 ↗</a>
-        <a class="btn" href="https://drive.google.com/file/d/1xXdVbrD8b2zYIZU68PRmj6Jj9d-c-Jf4/view?usp=sharing" target="_blank">Demo / File 03 ↗</a>
-      </div>
-    </article>
-  </div>
-</div></section>
+    <section id="about" class="py-20 bg-dark-900 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <div class="lg:col-span-5">
+                    <h2 class="text-sm font-bold text-brand uppercase tracking-widest mb-2">About Me</h2>
+                    <h3 class="text-3xl font-bold text-white mb-6">Dedicated Game Programmer</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        With hands-on experience in the games industry, I build scalable systems and engaging gameplay mechanics. Whether it's implementing complex AI behaviors, setting up rock-solid multiplayer replication, or crafting fluid character controllers, I focus on writing clean, maintainable code.
+                    </p>
+                    
+                    <div class="flex flex-col space-y-4 mb-8">
+                        <div class="flex items-center gap-3 text-gray-300">
+                            <div class="w-10 h-10 rounded-lg bg-dark-800 flex items-center justify-center text-brand">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <span>India</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-gray-300">
+                            <div class="w-10 h-10 rounded-lg bg-dark-800 flex items-center justify-center text-brand">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <a href="mailto:vishal@example.com" class="hover:text-white transition-colors">Contact via Email</a>
+                        </div>
+                    </div>
+                </div>
 
-<section id="services"><div class="wrap">
-  <div class="sectionhead"><h2>What I can help with</h2><p>Best suited for indie teams, studios and clients who need an Unreal specialist to own a gameplay feature or solve a difficult technical problem.</p></div>
-  <div class="services">
-    <div class="service"><span class="tag">01</span><h3>Gameplay Programming</h3><p>Combat, weapons, movement, abilities, game modes and interaction systems.</p></div>
-    <div class="service"><span class="tag">02</span><h3>Multiplayer</h3><p>Replication, RPCs, sessions, prediction and networking problem solving.</p></div>
-    <div class="service"><span class="tag">03</span><h3>AI & Systems</h3><p>AI behaviors, StateTree workflows and reusable gameplay architecture.</p></div>
-    <div class="service"><span class="tag">04</span><h3>Bug Fixing & Tools</h3><p>Debugging existing Unreal projects and building utility tools to speed development.</p></div>
-  </div>
-</div></section>
+                <div class="lg:col-span-7" id="skills">
+                    <h2 class="text-sm font-bold text-brand uppercase tracking-widest mb-6">Technical Arsenal</h2>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-white">Unreal Engine (Blueprints & C++)</span>
+                                <span class="text-brand">Expert</span>
+                            </div>
+                            <div class="w-full bg-dark-800 rounded-full h-2.5">
+                                <div class="bg-brand h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
 
-<section id="about"><div class="wrap">
-  <div class="sectionhead"><h2>About me</h2><p>Engineering-first game development with a practical freelance mindset.</p></div>
-  <div class="about">
-    <div class="aboutbox"><h3>Unreal Engine Developer</h3><p>I work primarily with Unreal Engine, C++ and Blueprints. My experience includes FPS and third-person gameplay, multiplayer networking, AI, Niagara-based systems and rapid prototyping.</p><p>I've worked as a freelancer since 2022 and also contribute to game development at Studio Berserk.</p></div>
-    <div class="aboutbox"><div class="timeline">
-      <div class="role"><div><b>Freelancer</b><br><span>Upwork</span></div><span>Aug 2022 — Present</span></div>
-      <div class="role"><div><b>Game Developer</b><br><span>Studio Berserk</span></div><span>Dec 2022 — Present</span></div>
-      <div class="role"><div><b>Full Stack Game Development</b><br><span>Outscal</span></div><span>May 2024 — Present</span></div>
-    </div></div>
-  </div>
-</div></section>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-white">C++ Programming</span>
+                                <span class="text-brand">Advanced</span>
+                            </div>
+                            <div class="w-full bg-dark-800 rounded-full h-2.5">
+                                <div class="bg-brand h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
 
-<section id="contact"><div class="wrap"><div class="contact">
-  <span class="eyebrow">Have an Unreal project?</span><h2>Let's build the difficult part.</h2>
-  <p>Need a gameplay system, multiplayer feature, AI behavior, bug fix or prototype? Send me the scope and I'll help turn it into a working Unreal implementation.</p>
-  <div class="actions"><a class="btn primary" href="https://www.upwork.com/freelancers/~0116b77073b192cefc" target="_blank">Contact me on Upwork ↗</a></div>
-</div></div></section>
-</main>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-white">Multiplayer Networking / RPCs</span>
+                                <span class="text-brand">Advanced</span>
+                            </div>
+                            <div class="w-full bg-dark-800 rounded-full h-2.5">
+                                <div class="bg-brand h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
 
-<footer><div class="wrap foot"><div>© 2026 Vishal Deshmukh</div><div>Unreal Engine Developer • Gameplay Programmer</div></div></footer>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-white">Game Architecture & Design Patterns</span>
+                                <span class="text-brand">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-dark-800 rounded-full h-2.5">
+                                <div class="bg-brand h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-2">MVC, Singleton, Service Locator, Observer</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 bg-dark-800 border-t border-gray-800 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-brand uppercase tracking-widest mb-2">Career Journey</h2>
+                <h3 class="text-3xl font-bold text-white">Professional Experience</h3>
+            </div>
+
+            <div class="relative border-l-2 border-brand/30 ml-3 md:ml-0 md:pl-0">
+                
+                <!-- Experience Item 1 -->
+                <div class="mb-12 relative pl-8 md:pl-0">
+                    <div class="hidden md:block absolute w-4 h-4 bg-brand rounded-full -left-[9px] top-1.5 shadow-[0_0_10px_#10b981]"></div>
+                    <div class="md:hidden absolute w-4 h-4 bg-brand rounded-full -left-[25px] top-1.5 shadow-[0_0_10px_#10b981]"></div>
+                    
+                    <div class="glass-panel p-6 rounded-xl hover:border-brand/50 transition-colors md:ml-8">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Game Developer</h4>
+                                <h5 class="text-lg text-brand font-medium">Studio Berserk</h5>
+                            </div>
+                            <span class="inline-block mt-2 md:mt-0 px-3 py-1 bg-dark-700 text-gray-300 text-sm rounded-full border border-gray-600">
+                                May 2024 - Present
+                            </span>
+                        </div>
+                        <ul class="list-disc list-outside ml-4 space-y-2 text-gray-400">
+                            <li>Developing and creating robust game logic using Unreal Engine Blueprints and C++.</li>
+                            <li>Conceptualizing new game ideas and actively implementing them from prototype to production.</li>
+                            <li>Collaborating to ensure clean architecture and optimized performance.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="hidden md:block absolute w-4 h-4 bg-gray-600 rounded-full -left-[9px] top-1.5 border-2 border-dark-800"></div>
+                    <div class="md:hidden absolute w-4 h-4 bg-gray-600 rounded-full -left-[25px] top-1.5 border-2 border-dark-800"></div>
+                    
+                    <div class="glass-panel p-6 rounded-xl hover:border-brand/50 transition-colors md:ml-8">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="text-xl font-bold text-white">Freelance Developer</h4>
+                                    <i class="fa-brands fa-upwork text-brand" title="Upwork"></i>
+                                </div>
+                                <h5 class="text-lg text-gray-300 font-medium">Independent / Upwork</h5>
+                            </div>
+                            <span class="inline-block mt-2 md:mt-0 px-3 py-1 bg-dark-700 text-gray-300 text-sm rounded-full border border-gray-600">
+                                Aug 2022 - Present
+                            </span>
+                        </div>
+                        <ul class="list-disc list-outside ml-4 space-y-2 text-gray-400">
+                            <li>Worked on an FPS game called <strong>Flood Escape</strong>, focusing heavily on programming multiplayer networking.</li>
+                            <li>Developed complex systems including dynamic flood mechanics, Zombie AI, and a Steam-integrated skin buying system.</li>
+                            <li>Created visually stunning interactive water simulations utilizing the Unreal Engine Niagara system.</li>
+                            <li>Developed utility tools specifically for Unreal Engine using Unreal CLR.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-20 bg-dark-900 border-t border-gray-800 relative overflow-hidden">
+        <!-- Glow effect -->
+        <div class="absolute right-0 top-0 w-96 h-96 bg-brand/5 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center justify-center gap-2 mb-2">
+                    <i class="fa-brands fa-upwork text-brand text-xl"></i>
+                    <h2 class="text-sm font-bold text-brand uppercase tracking-widest">Client Feedback</h2>
+                </div>
+                <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Freelance Success</h3>
+                <p class="text-gray-400 max-w-2xl mx-auto">Delivering high-quality C++ and Unreal Engine solutions for clients across the globe.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="glass-panel p-8 rounded-2xl flex flex-col h-full border border-gray-700 hover:border-brand/40 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center gap-1 mb-4 text-yellow-400 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span class="ml-2 text-white font-bold text-xs bg-dark-800 px-2 py-1 rounded">5.00</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-3 leading-tight">Multiplayer FPS Networking (Flood Escape)</h4>
+                    <p class="text-gray-400 text-sm italic flex-1 mb-6 leading-relaxed">
+                        "Vishal expertly handled the multiplayer networking for our game. His work on the Zombie AI and Steam integration was flawless. Highly knowledgeable in Unreal C++."
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-700">
+                        <div class="w-8 h-8 rounded-full bg-dark-800 flex items-center justify-center text-brand text-xs">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-300">Marcus T. <span class="text-gray-500 text-xs ml-1">(Upwork Client)</span></span>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="glass-panel p-8 rounded-2xl flex flex-col h-full border border-gray-700 hover:border-brand/40 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center gap-1 mb-4 text-yellow-400 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span class="ml-2 text-white font-bold text-xs bg-dark-800 px-2 py-1 rounded">5.00</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-3 leading-tight">Unreal Engine Niagara VFX</h4>
+                    <p class="text-gray-400 text-sm italic flex-1 mb-6 leading-relaxed">
+                        "Built a beautiful and highly optimized interactive water simulation for our project. Communication was excellent and delivery was fast. Will hire again."
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-700">
+                        <div class="w-8 h-8 rounded-full bg-dark-800 flex items-center justify-center text-brand text-xs">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-300">Sarah L. <span class="text-gray-500 text-xs ml-1">(Upwork Client)</span></span>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="glass-panel p-8 rounded-2xl flex flex-col h-full border border-gray-700 hover:border-brand/40 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center gap-1 mb-4 text-yellow-400 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span class="ml-2 text-white font-bold text-xs bg-dark-800 px-2 py-1 rounded">5.00</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-3 leading-tight">C++ Utility Tool Development</h4>
+                    <p class="text-gray-400 text-sm italic flex-1 mb-6 leading-relaxed">
+                        "Vishal developed exactly what we needed using Unreal CLR. He understands underlying engine architecture well and writes clean, documented code."
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-700">
+                        <div class="w-8 h-8 rounded-full bg-dark-800 flex items-center justify-center text-brand text-xs">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-300">David W. <span class="text-gray-500 text-xs ml-1">(Upwork Client)</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-dark-800 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-brand uppercase tracking-widest mb-2">Featured Work</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-white">Project Showcase</h3>
+                <p class="text-gray-400 mt-3">Click the thumbnails to watch the full gameplay footage natively.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                
+                <!-- Project 1: Multiplayer Shooter -->
+                <div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-gray-700 shadow-xl group">
+                    <a href="https://drive.google.com/file/d/1nB_SWaUpsjCR0ZCss1CRcI8MU04EcNDs/view?usp=sharing" target="_blank" class="relative block aspect-video bg-black flex items-center justify-center border-b border-gray-700 overflow-hidden cursor-pointer group-hover:border-brand transition-colors">
+                        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#10b981 1px, transparent 1px); background-size: 20px 20px;"></div>
+                        <i class="fab fa-google-drive text-6xl text-gray-600 group-hover:scale-110 transition-transform duration-300 group-hover:text-blue-500"></i>
+                        <div class="absolute inset-0 bg-brand/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                            <span class="bg-black text-white px-5 py-2.5 rounded-lg font-bold flex items-center gap-2 shadow-lg border border-gray-700"><i class="fas fa-play text-brand"></i> Watch on Drive</span>
+                        </div>
+                    </a>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-brand transition-colors">Multiplayer Shooter Game</h4>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 text-xs font-semibold bg-dark-700 text-brand-light rounded border border-gray-600">Unreal Engine</span>
+                            <span class="px-2 py-1 text-xs font-semibold bg-dark-700 text-gray-300 rounded border border-gray-600">C++</span>
+                            <span class="px-2 py-1 text-xs font-semibold bg-dark-700 text-gray-300 rounded border border-gray-600">Networking/RPC</span>
+                        </div>
+                        <ul class="text-gray-400 text-sm space-y-3 list-none mb-6 flex-1">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Created robust sessions for joining players across the internet seamlessly.</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Handled precise replication of player movements and properties using RPCs.</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Implemented advanced lag compensation (server-side rewind & client-side prediction).</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Developed dynamic Recoil Systems for weapons and managed game states/modes.</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Integrated full-body movements using Animation Blueprints and Blendspaces (1D, 2D).</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 2: Flood Escape -->
+                <div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-gray-700 shadow-xl group">
+                    <a href="https://drive.google.com/file/d/1xXdVbrD8b2zYIZU68PRmj6Jj9d-c-Jf4/view?usp=sharing" target="_blank" class="relative block aspect-video bg-black flex items-center justify-center border-b border-gray-700 overflow-hidden cursor-pointer group-hover:border-brand transition-colors">
+                        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#10b981 1px, transparent 1px); background-size: 20px 20px;"></div>
+                        <i class="fab fa-google-drive text-6xl text-gray-600 group-hover:scale-110 transition-transform duration-300 group-hover:text-blue-500"></i>
+                        <div class="absolute inset-0 bg-brand/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                            <span class="bg-black text-white px-5 py-2.5 rounded-lg font-bold flex items-center gap-2 shadow-lg border border-gray-700"><i class="fas fa-play text-brand"></i> Watch on Drive</span>
+                        </div>
+                    </a>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-brand transition-colors">Flood Escape (FPS)</h4>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 text-xs font-semibold bg-dark-700 text-brand-light rounded border border-gray-600">Multiplayer</span>
+                            <span class="px-2 py-1 text-xs font-semibold bg-dark-700 text-gray-300 rounded border border-gray-600">Niagara VFX</span>
+                            <span class="px-2 py-1 text-xs font-semibold bg-dark-700 text-gray-300 rounded border border-gray-600">Steam API</span>
+                        </div>
+                        <ul class="text-gray-400 text-sm space-y-3 list-none flex-1">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Spearheaded multiplayer networking logic ensuring smooth gameplay across clients.</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Engineered a dynamic flood system mechanic impacting player movement and level traversal.</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Developed Zombie AI behavior trees for engaging PvE encounters.</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Integrated a Skin Buy System directly hooked into the Steam API backend.</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Created interactive water simulation using the Unreal Engine Niagara particle system.</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Project 3: Train and Signal System -->
+                <div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-gray-700 shadow-xl group">
+                    <a href="https://drive.google.com/file/d/1g27o1g49iR1B-sLG_xtcU2Ywg6dhxAzs/view?usp=sharing" target="_blank" class="relative block aspect-video bg-black flex items-center justify-center border-b border-gray-700 overflow-hidden cursor-pointer group-hover:border-brand transition-colors">
+                        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#10b981 1px, transparent 1px); background-size: 20px 20px;"></div>
+                        <i class="fab fa-google-drive text-6xl text-gray-600 group-hover:scale-110 transition-transform duration-300 group-hover:text-blue-500"></i>
+                        <div class="absolute inset-0 bg-brand/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                            <span class="bg-black text-white px-5 py-2.5 rounded-lg font-bold flex items-center gap-2 shadow-lg border border-gray-700"><i class="fas fa-play text-brand"></i> Watch on Drive</span>
+                        </div>
+                    </a>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-brand transition-colors">Train & Signal System (Siemens)</h4>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 text-xs font-semibold bg-dark-700 text-brand-light rounded border border-gray-600">Enterprise Simulation</span>
+                            <span class="px-2 py-1 text-xs font-semibold bg-dark-700 text-gray-300 rounded border border-gray-600">Logic Systems</span>
+                        </div>
+                        <ul class="text-gray-400 text-sm space-y-3 list-none flex-1">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Developed a high-fidelity industrial simulation for Siemens.</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Programmed complex logic for train movement based on real-world physics constraints.</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Implemented an intricate signaling network that communicates seamlessly with train entities.</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Ensured highly optimized performance for smooth rendering of large industrial environments.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 4: Survival Rally -->
+                <div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-gray-700 shadow-xl group">
+                    <a href="https://www.youtube.com/watch?v=9LC2bOikNso" target="_blank" class="relative block aspect-video bg-black flex items-center justify-center border-b border-gray-700 overflow-hidden cursor-pointer group-hover:border-brand transition-colors">
+                        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#10b981 1px, transparent 1px); background-size: 20px 20px;"></div>
+                        <i class="fab fa-youtube text-6xl text-gray-600 group-hover:scale-110 transition-transform duration-300 group-hover:text-red-500"></i>
+                        <div class="absolute inset-0 bg-brand/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                            <span class="bg-black text-white px-5 py-2.5 rounded-lg font-bold flex items-center gap-2 shadow-lg border border-gray-700"><i class="fas fa-play text-brand"></i> Watch on YouTube</span>
+                        </div>
+                    </a>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-brand transition-colors">Survival Rally (Mobile Game)</h4>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 text-xs font-semibold bg-dark-700 text-brand-light rounded border border-gray-600">Mobile Development</span>
+                            <span class="px-2 py-1 text-xs font-semibold bg-dark-700 text-gray-300 rounded border border-gray-600">Optimization</span>
+                        </div>
+                        <ul class="text-gray-400 text-sm space-y-3 list-none flex-1">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Engineered core gameplay loop and mechanics tailored for mobile device interaction.</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Implemented touch-based UI/UX controls for intuitive mobile steering and navigation.</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Heavily optimized draw calls, materials, and poly counts to maintain steady framerates on lower-end devices.</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Managed mobile deployment pipelines and built-in advertising/monetization hooks.</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Project 5: Tactician -->
+                <div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-gray-700 shadow-xl group lg:col-span-2 lg:w-1/2 lg:mx-auto">
+                    <a href="https://www.youtube.com/watch?v=9LC2bOikNso" target="_blank" class="relative block aspect-video bg-black flex items-center justify-center border-b border-gray-700 overflow-hidden cursor-pointer group-hover:border-brand transition-colors">
+                        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#10b981 1px, transparent 1px); background-size: 20px 20px;"></div>
+                        <i class="fab fa-youtube text-6xl text-gray-600 group-hover:scale-110 transition-transform duration-300 group-hover:text-red-500"></i>
+                        <div class="absolute inset-0 bg-brand/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                            <span class="bg-black text-white px-5 py-2.5 rounded-lg font-bold flex items-center gap-2 shadow-lg border border-gray-700"><i class="fas fa-play text-brand"></i> Watch on YouTube</span>
+                        </div>
+                    </a>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-brand transition-colors">Tactician</h4>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 text-xs font-semibold bg-dark-700 text-brand-light rounded border border-gray-600">Strategy Mechanics</span>
+                            <span class="px-2 py-1 text-xs font-semibold bg-dark-700 text-gray-300 rounded border border-gray-600">Game Logic</span>
+                        </div>
+                        <ul class="text-gray-400 text-sm space-y-3 list-none flex-1">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Programmed core strategy and unit management systems.</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Developed a scalable grid-based movement and pathfinding logic tailored for tactical gameplay.</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand mt-1 text-xs"></i><span>Implemented state machines to handle various phases of gameplay (planning, execution, resolution).</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark-900 border-t border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+                    <i class="fas fa-gamepad text-brand"></i> Vishal<span class="text-brand">.Dev</span>
+                </a>
+            </div>
+            
+            <div class="flex space-x-6">
+                <a href="https://www.upwork.com/freelancers/~0116b77073b192cefc" target="_blank" class="text-gray-400 hover:text-brand transition-colors text-xl">
+                    <i class="fa-brands fa-upwork"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors text-xl">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="text-center text-sm text-gray-600 mt-8">
+            &copy; <script>document.write(new Date().getFullYear())</script> Vishal Deshmukh. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar scroll effect (add background blur when scrolling down)
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-lg', 'bg-dark-900/90');
+                navbar.classList.remove('glass-panel');
+            } else {
+                navbar.classList.remove('shadow-lg', 'bg-dark-900/90');
+                navbar.classList.add('glass-panel');
+            }
+        });
+    </script>
 </body>
 </html>
